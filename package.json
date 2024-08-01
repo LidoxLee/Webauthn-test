@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "build:admin": "dotenv -e .env.local -- turbo run build --filter admin",
+    "build:myapp": "dotenv -e .env.local -- turbo run build --filter my-app",
+    "dev:my-app": "dotenv -e .env.local -- turbo run dev --filter my-app",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "tsconfig": "*",
+    "turbo": "latest"
+  },
+  "name": "webauthn-test",
+  "packageManager": "npm@8.15.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@passwordless-id/webauthn": "^1.5.0",
+    "antd": "^5.16.2",
+    "dotenv-cli": "^7.4.1",
+    "ethereumjs-util": "^7.1.5",
+    "next": "^14.2.1",
+    "secp256k1": "^5.0.0"
+  }
+}
