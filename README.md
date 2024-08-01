@@ -1,3 +1,12 @@
+# Run app
+just call `make run` in shell
+
+```bash
+make run
+```
+
+
+
 # Turborepo next.js tailwind starter
 
 This is a simple example for starter.
